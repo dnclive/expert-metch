@@ -1,0 +1,7 @@
+Домен ещё не назван. Когда он будет известен (пример: example.ru):
+
+  printf '%s\n' example.ru > CNAME
+  sed -i 's/__DOMAIN__/example.ru/g' index.html robots.txt sitemap.xml
+  git rm CNAME.todo
+
+После этого в настройках Pages указать тот же домен и включить Enforce HTTPS.

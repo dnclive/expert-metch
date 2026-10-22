@@ -35,7 +35,7 @@ a{color:var(--o2)}
 .nav a:hover{color:var(--o2)}
 .hero{background:linear-gradient(135deg,var(--o1) 0%,var(--o2) 45%,var(--o3) 100%);color:#fff;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:80px}
-.hero h1{font-size:clamp(32px,5.4vw,56px);line-height:1.08;margin:0 0 20px;letter-spacing:-.01em}
+.hero h1{font-size:clamp(32px,5.4vw,56px);line-height:1.08;margin:0 0 20px;letter-spacing:-.01em;overflow-wrap:break-word}
 .hero p{font-size:clamp(17px,2vw,20px);margin:0 0 32px;max-width:34em;color:#fff}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;font-weight:600;text-decoration:none;min-height:48px}
@@ -70,7 +70,7 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
 .cts dl{margin:0}
 .cts dt{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-top:18px}
 .cts dt:first-child{margin-top:0}
-.cts dd{margin:4px 0 0;font-size:18px}
+.cts dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
 .cts dd a{text-decoration:none;font-weight:600}
 .req{width:100%;border-collapse:collapse;font-size:15px}
 .req th,.req td{text-align:left;vertical-align:top;padding:9px 0;border-bottom:1px solid var(--line)}
@@ -81,15 +81,16 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
 .ftr a{color:#fff}
 .ftr p{margin:0}
 @media (max-width:900px){
- .hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:56px}
+ .hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:48px;padding-bottom:56px}
  .shelf{max-width:440px;margin:0 auto}
- .grid3,.cts{grid-template-columns:1fr}
+ .grid3,.cts{grid-template-columns:minmax(0,1fr)}
  .grid4,.nums{grid-template-columns:repeat(2,1fr)}
  .nav{display:none}
  section{padding:56px 0}
 }
 @media (max-width:480px){
  .wrap{padding:0 16px}
+ .hero h1{font-size:clamp(22px,7.4vw,32px)}
  .grid4{grid-template-columns:1fr}
  .card{padding:22px}
  .btn{width:100%;justify-content:center}

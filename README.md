@@ -10,7 +10,7 @@
 - `favicon.svg`, `favicon-32.png` — значок сайта.
 - `og.png` — картинка для превью ссылок (1200×630), снята со `source/og.html`.
 - `robots.txt`, `sitemap.xml` — для поисковиков.
-- `CNAME.todo` — что сделать, когда будет назван домен (затем появится файл `CNAME`).
+- `CNAME` — домен сайта для GitHub Pages: `merch.expertcom777.com`.
 - `source/chatium-2026-10-22.md` — исходные тексты прежней страницы, откуда взято каждое утверждение.
 
 ## Как править
@@ -20,6 +20,15 @@
 
 ## Публикация (GitHub Pages)
 
+Адрес сайта: https://merch.expertcom777.com/
+
 Settings → Pages → Source: «Deploy from a branch», ветка `main`, папка `/ (root)`. Каждый push в `main`
-публикуется сам, через минуту-две. Свой домен — файл `CNAME` с именем домена и DNS-запись CNAME на
-`<владелец>.github.io` (или A-записи GitHub Pages для корня домена); затем включить «Enforce HTTPS».
+публикуется сам, через минуту-две. Домен задаёт файл `CNAME` (одна строка: `merch.expertcom777.com`); в DNS — запись CNAME
+`merch` на `<владелец>.github.io`, без проксирования. В Settings → Pages включена «Enforce HTTPS».
+
+Сайт живёт в корне домена: ссылки в `index.html` относительные, в `404.html` — от корня (`/`), чтобы
+страница «не найдено» работала на любом пути. По адресу `<владелец>.github.io/<репозиторий>/` Pages
+перенаправляет на домен.
+
+Если домен сменится — поменять его в `CNAME`, `index.html` (canonical, og:url, og:image), `robots.txt`,
+`sitemap.xml` и в этом файле.

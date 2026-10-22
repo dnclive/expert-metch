@@ -68,16 +68,11 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
 .nums div{padding:8px}
 .nums b{display:block;font-size:clamp(32px,4.4vw,48px);line-height:1.1}
 .nums span{font-size:15px}
-.cts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.cts dl{margin:0}
-.cts dt{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-top:18px}
-.cts dt:first-child{margin-top:0}
+.cts{max-width:880px;margin:0 auto}
+.cts dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 32px}
+.cts dt{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-top:0}
 .cts dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
 .cts dd a{text-decoration:none;font-weight:600}
-.req{width:100%;border-collapse:collapse;font-size:15px}
-.req th,.req td{text-align:left;vertical-align:top;padding:9px 0;border-bottom:1px solid var(--line)}
-.req th{color:var(--mute);font-weight:400;width:38%;padding-right:12px}
-.req tr:last-child th,.req tr:last-child td{border-bottom:0}
 .ftr{background:#111827;color:#d1d5db;padding:40px 0;font-size:14px}
 .ftr .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .ftr a{color:#fff}
@@ -85,7 +80,8 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
 @media (max-width:900px){
  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:48px;padding-bottom:56px}
  .shelf{max-width:440px;margin:0 auto}
- .grid3,.cts{grid-template-columns:minmax(0,1fr)}
+ .grid3{grid-template-columns:minmax(0,1fr)}
+ .cts dl{grid-template-columns:minmax(0,1fr)}
  .grid4,.nums{grid-template-columns:repeat(2,1fr)}
  .nav{display:none}
  section{padding:56px 0}
@@ -96,8 +92,6 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
  .grid4{grid-template-columns:1fr}
  .card{padding:22px}
  .btn{width:100%;justify-content:center}
- .req th{width:auto;display:block;padding-bottom:0;border:0}
- .req td{display:block;padding-top:2px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
 </style>
@@ -199,23 +193,11 @@ h2:after{content:"";display:block;width:56px;height:4px;border-radius:2px;margin
    <div class="card">
     <h3 style="margin-top:0">Контактная информация</h3>
     <dl>
-     <dt>Телефон</dt><dd><a href="tel:+78612033615">+7 (861) 203-36-15</a></dd>
-     <dt>E-mail</dt><dd><a href="mailto:expert.com.777@gmail.com">expert.com.777@gmail.com</a></dd>
-     <dt>Адрес</dt><dd>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</dd>
-     <dt>Режим работы</dt><dd>Пн–Пт: 9:00–18:00<br>Сб–Вс: выходной</dd>
+     <div><dt>Телефон</dt><dd><a href="tel:+78612033615">+7 (861) 203-36-15</a></dd></div>
+     <div><dt>E-mail</dt><dd><a href="mailto:expert.com.777@gmail.com">expert.com.777@gmail.com</a></dd></div>
+     <div><dt>Адрес</dt><dd>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</dd></div>
+     <div><dt>Режим работы</dt><dd>Пн–Пт: 9:00–18:00<br>Сб–Вс: выходной</dd></div>
     </dl>
-   </div>
-   <div class="card" id="requisites">
-    <h3 style="margin-top:0">Реквизиты</h3>
-    <table class="req">
-     <tr><th scope="row">Полное наименование</th><td>Общество с ограниченной ответственностью «ЭКСПЕРТ»</td></tr>
-     <tr><th scope="row">Сокращённое наименование</th><td>ООО «ЭКСПЕРТ»</td></tr>
-     <tr><th scope="row">ИНН</th><td>2308236556</td></tr>
-     <tr><th scope="row">КПП</th><td>230801001</td></tr>
-     <tr><th scope="row">ОГРН</th><td>1162375038341</td></tr>
-     <tr><th scope="row">Юридический адрес</th><td>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</td></tr>
-     <tr><th scope="row">Руководитель</th><td>Директор — Жлобенцева Юлия Николаевна</td></tr>
-    </table>
    </div>
   </div>
  </div>
